@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListView"
+             x:Class="ListView.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <ListView x:Name="listview" ItemsSource="{Binding List}" ItemTapped="Listview_ItemTapped" Header="TeamList" Footer="end of list" RowHeight="50" HasUnevenRows="True" BackgroundColor="OldLace">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="WhiteSmoke">
+                            <Label Text="Name:"></Label>
+                            <Label Text="{Binding Name}"></Label>
+                            <Label Text="Designation:"></Label>
+                            <Label Text="{Binding Designation}"></Label>
+                            <Label Text="College:"></Label>
+                            <Label Text="{Binding College}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Command="{Binding displayList}" CommandParameter="{Binding Source={x:Reference listview}}" Text="click"></Button>
+        <Button Text="Add a new member" Clicked="Button_Clicked"></Button>
+    
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListView.Page2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="name"  x:Name="name"></Entry>
+            <Entry Placeholder="designation" Text="{Binding Designation1}" x:Name="desig"></Entry>
+            <Entry Placeholder="college" Text="{Binding College1}" x:Name="college"></Entry>
+            <Entry Placeholder="empId" Text="{Binding EmpId1}" x:Name="emp"></Entry>
+            <Entry Placeholder="workson" Text="{Binding Workson1}" x:Name="work"></Entry>
+            <Entry Placeholder="mentor" Text="{Binding Mentor1}" x:Name="men"></Entry>
+            <Button Text="Add" Clicked="Button_Clicked"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

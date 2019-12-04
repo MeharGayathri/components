@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:picker"
+             x:Class="picker.MainPage"
+             x:Name="gg">
+
+    <AbsoluteLayout  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="Azure" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="AliceBlue" >
+                <Button Text="clickhere" Clicked="Button_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+
+        <ContentView x:Name="popupListView" BackgroundColor="#C0808080" Padding="10, 0" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <StackLayout Orientation="Vertical" HeightRequest="200" WidthRequest="300" BackgroundColor="White">
+                    <ListView x:Name="sampleList"  ItemsSource="{Binding li}" ItemTapped="SampleList_ItemTapped" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell >
+                                    <StackLayout Orientation="Horizontal" x:Name="bb">
+                                        <CheckBox x:Name="aa" IsChecked="{Binding check}"></CheckBox>
+                                        <Label Text="{Binding item}"></Label>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Button Text="okay !" Clicked="Button_Clicked_1"/>
+                </StackLayout>
+            </StackLayout>
+        </ContentView>
+        <Label x:Name="label" Text="" FontAttributes="Bold"></Label>
+    </AbsoluteLayout>
+
+</ContentPage>

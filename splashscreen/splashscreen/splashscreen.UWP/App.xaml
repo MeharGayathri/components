@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="splashscreen.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:splashscreen.UWP"
+    RequestedTheme="Light">
+
+</Application>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListView.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="MentorName:"></Label>
+            <Label x:Name="Mentor"></Label>
+            <Label Text="WorksOn:"></Label>
+            <Label x:Name="Workson"></Label>
+            <Label Text="EmpId:"></Label>
+            <Label x:Name="EmpId"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
